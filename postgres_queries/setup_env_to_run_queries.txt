@@ -1,0 +1,33 @@
+1. start the wsl ubuntu
+2. install postgres on wsl ubuntu
+sudo apt update
+sudo apt install -y postgresql postgresql-contrib
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+sudo systemctl status postgresql
+sudo -i -u postgres
+psql
+
+CREATE DATABASE shopdb;
+
+
+
+
+-> List of all databases
+postgres=# \l
+
+-> connect to db
+\c shopdb
+
+-> list all tables in currently connected db
+\dt *.*
+
+-> see a table's all column
+\d order_table
+
+-> by default postgres user doesn't have any password, we can create one once we get the psql prompt
+ALTER USER postgres WITH PASSWORD 'your_secure_password';
+
+and then connect to postgres using below command:
+psql -U postgres -p 5433 -h 127.0.0.1 -d <database name>
+
