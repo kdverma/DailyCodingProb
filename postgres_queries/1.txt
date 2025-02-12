@@ -1,0 +1,11 @@
+-> statment : find top 10 customer id and total amount spent by them in descending order;
+
+-> query to records : 
+insert into order_table (customer_id, amount, order_date) values (106, 500.00, '2025-01-28 10:15:00'), (106, 500.00, '2025-01-28 10:15:00'),(106, 550.00, '2025-01-22 11:15:00'),(107, 100.00, '2025-02-
+28 10:15:00'),(109, 50.00, '2025-03-28 12:15:00'),(106, 50.00, '2025-01-30 08:08:00'),(109, 5000.00, '2025-02-12 12:18:00');
+
+-> query : select customer_id, sum(amount) as amount from order_table group by customer_id order by amount desc limit 10;
+
+ 
+
+  
