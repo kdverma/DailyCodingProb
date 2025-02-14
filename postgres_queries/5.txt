@@ -1,0 +1,6 @@
+-> given the employee_table and department_table related by department_id; return department_names according with employee sorted in descending order of average salary of employees in each department;
+
+select department_table.department_name, AVG(employee_table.salary) as average_salary from employee_table
+inner join department_table on employee_table.department_id = department_table.department_id
+group by department_table.department_name
+order by average_salary desc;
