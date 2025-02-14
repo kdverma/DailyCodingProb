@@ -1,0 +1,9 @@
+-> given employee_table and department_table related by department_id; return employee from sales department whose name starts with 'B' and has a salary of greater than 5000.
+
+select employee_table.id, employee_table.name, employee_table.salary, employee_table.department_id from employee_table
+left join department_table on employee_table.department_id = department_table.department_id
+  where employee_table.name LIKE 'B%'
+AND employee_table.salary > 50000
+  AND department_table.department_name = 'Sales';
+
+*use alias
