@@ -1,0 +1,8 @@
+-> left join, alias
+-> write  a query to return last 3 records from employee_table along with their relevent manager_name and department_name
+
+select employee_table.emp_id, employee_table.emp_name, employee_table.emp_no, manager_table.manager_name,department_table.department_name
+from employee_table
+left join manager_table on employee_table.manager_id = manager_table.manager_id
+left join department_table on employee_table.department_id = department_table.department_id
+order by employee_table.emp_id desc limit 3;
