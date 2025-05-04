@@ -28,7 +28,7 @@ class String{
 };
 int main()
 {
-	String str1; // default constructor
+	String str1; // defaultt constructor
 	String str2 = "Apple";
 	cout << str2.val();
 
